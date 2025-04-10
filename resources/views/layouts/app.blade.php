@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('css/skins/reverse.css') }}">
 
-
     <!-- Additional CSS (if any) -->
     @stack('css')
 </head>

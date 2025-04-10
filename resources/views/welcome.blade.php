@@ -83,7 +83,7 @@
             </div>
             <!-- Other product items - empty images replaced with placeholders -->
             <div class="item">
-                <img src="{{ asset('assets/img-assets/placeholder.jpg') }}">
+                <img src="{{ asset('img/img-assets/karinding (2).jpg') }}">
                 <div class="info">
                     <div>
                         <h5>Produk</h5>

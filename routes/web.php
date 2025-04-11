@@ -30,9 +30,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/blank-page', [App\Http\Controllers\HomeController::class, 'blank'])->name('blank');
 
     Route::get('/hakakses', [App\Http\Controllers\HakaksesController::class, 'index'])->name('hakakses.index')->middleware('admin');
+    Route::get('/hakakses/create', [App\Http\Controllers\HakaksesController::class, 'create'])->name('hakakses.create')->middleware('admin');
+    Route::post('/hakakses/store', [App\Http\Controllers\HakaksesController::class, 'store'])->name('hakakses.store')->middleware('admin');
     Route::get('/hakakses/edit/{id}', [App\Http\Controllers\HakaksesController::class, 'edit'])->name('hakakses.edit')->middleware('admin');
     Route::put('/hakakses/update/{id}', [App\Http\Controllers\HakaksesController::class, 'update'])->name('hakakses.update')->middleware('admin');
     Route::delete('/hakakses/delete/{id}', [App\Http\Controllers\HakaksesController::class, 'destroy'])->name('hakakses.delete')->middleware('admin');
+
+    Route::post('/hakakses/{id}/send-otp', [App\Http\Controllers\HakaksesController::class, 'sendOtp'])->name('hakakses.send-otp')->middleware('admin');
+    Route::post('/hakakses/{id}/verify-otp', [App\Http\Controllers\HakaksesController::class, 'verifyOtp'])->name('hakakses.verify-otp')->middleware('admin');
+    Route::put('/hakakses/{id}/update-password', [App\Http\Controllers\HakaksesController::class, 'updatePassword'])->name('hakakses.update-password')->middleware('admin');
 
     Route::get('/table-example', [App\Http\Controllers\ExampleController::class, 'table'])->name('table.example');
     Route::get('/clock-example', [App\Http\Controllers\ExampleController::class, 'clock'])->name('clock.example');

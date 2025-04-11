@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <!-- Meta Tags -->
     <meta charset="utf-8">
@@ -25,9 +26,15 @@
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('css/skins/reverse.css') }}">
 
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{ asset('library/datatables/media/css/jquery.dataTables.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('library/datatables/media/css/dataTables.bootstrap4.min.css') }}">
+
     <!-- Additional CSS (if any) -->
+
     @stack('css')
 </head>
+
 <body>
     <div id="app">
         <div class="main-wrapper">
@@ -50,9 +57,15 @@
     <!-- jQuery and Popper.js (required for Bootstrap 4) -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <!-- Bootstrap JS (Bootstrap 4) -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- DataTables -->
+    <script src="{{ asset('library/datatables/media/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('library/datatables/media/js/dataTables.bootstrap4.min.js') }}"></script>
 
     <!-- Custom JS Libraries -->
     <script src="{{ asset('library/jquery.nicescroll/dist/jquery.nicescroll.min.js') }}"></script>
@@ -64,6 +77,8 @@
     <script src="{{ asset('js/custom.js') }}"></script>
 
     <!-- Additional JS (if any) -->
+
     @stack('scripts')
 </body>
+
 </html>
